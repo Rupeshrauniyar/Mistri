@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Mistri</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+          <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+               integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+               crossorigin="anonymous"
+               referrerpolicy="no-referrer" />
+          <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css" />
+          <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" />
+          <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css" />
+          <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css" />
+          <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css" />
+     </head>
+
+     <body class="bg-gray-200 flex flex-col items-center justify-center w-screen h-screen">
+          <% if (error.length > 0) { %>
+          <div class="alert alert-danger bg-red-800 p-3 text-white rounded-md"><%= error %></div>
+          <% } %>
+          <form method="post" action="/register/mistri" enctype="multipart/form-data" class="flex flex-col items-center justify-center">
+               <div class="flex flex-col items-center justify-center bg-white w-96 min-h-96 rounded-md shadow-xl">
+                    <input type="file" id="ProfilePicture" name="ProfilePicture" style="display: none" />
+                    <label for="ProfilePicture" id="label" class="w-full pt-10 cursor-pointer flex items-center justify-center">
+                         <div>
+                              <img
+                                   src="https://imgs.search.brave.com/OCCpffu5G0USBBp9BWeKtaU6ZP8zwZGJbYDpsH1tE04/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmlt/Z2ZsaXAuY29tLzIv/ZDB0YjcuanBn"
+                                   class="rounded-full border-dashed border-2 w-[100px] h-[100px] object-cover"
+                                   id="DisplayProfilePic" />
+                         </div>
+                    </label>
+                    <input type="email" name="email" class="rounded-md mt-2 p-2 outline-none w-[300px]" placeholder="Email" style="background-color: #efefef" />
+                    <input type="password" name="password" class="rounded-md mt-2 outline-none p-2 w-[300px]" placeholder="Password" style="background-color: #efefef" />
+                    <input type="date" name="dob" class="rounded-md mt-2 outline-none p-2 w-[300px]" style="background-color: #efefef" />
+                    <input type="number" placeholder="Phone Number" name="phone" class="rounded-md mt-2 outline-none p-2 w-[300px]" style="background-color: #efefef" />
+                    <input type="number" placeholder="Age" name="age" class="rounded-md mt-2 outline-none p-2 w-[300px]" style="background-color: #efefef" />
+                    <p>
+                         Already have an mistri account?
+                         <a href="/login" class="text-blue-500"> Login</a>
+                    </p>
+                    <p>
+                         Create normal account?
+                         <a href="/register" class="text-blue-500"> Register</a>
+                    </p>
+                    <input
+                         type="submit"
+                         class="mt-4 mb-4 cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                         value="Register" />
+               </div>
+          </form>
+          <script src="/javascripts/register-mistri.js"></script>
+     </body>
+</html>

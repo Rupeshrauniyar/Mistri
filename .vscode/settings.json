@@ -1,0 +1,6 @@
+{
+    "editor.detectIndentation": true,
+    "workbench.editor.tabSizingFixedMaxWidth": 160,
+    "workbench.editor.tabSizingFixedMinWidth": 50,
+    "scm.diffDecorationsGutterWidth": 5
+}
